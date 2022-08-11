@@ -1,0 +1,45 @@
+name: emission_env
+channels:
+  - anaconda
+  - defaults
+dependencies:
+  - blas=1.0=mkl
+  - bzip2=1.0.8=he774522_0
+  - ca-certificates=2022.4.26=haa95532_0
+  - certifi=2021.5.30=py36haa95532_0
+  - click=8.0.3=pyhd3eb1b0_0
+  - dataclasses=0.8=pyh4f3eec9_6
+  - flask=2.0.3=pyhd3eb1b0_0
+  - icc_rt=2019.0.0=h0cc432a_1
+  - intel-openmp=2021.4.0=haa95532_3556
+  - itsdangerous=2.0.1=pyhd3eb1b0_0
+  - jinja2=3.0.3=pyhd3eb1b0_0
+  - libffi=3.4.2=hd77b12b_4
+  - libprotobuf=3.6.0=h1a1b453_0
+  - markupsafe=2.0.1=py36h2bbff1b_0
+  - mkl=2021.4.0=haa95532_640
+  - mysql-connector-c=6.1.11=h33f27b4_1
+  - mysql-connector-python=8.0.18=py36h13ed8b8_1
+  - numpy=1.14.2=py36h5c71026_0
+  - openssl=1.1.1o=h2bbff1b_0
+  - packaging=21.3=pyhd3eb1b0_0
+  - pandas=0.25.3=py36ha925a31_0
+  - pip=21.2.2=py36haa95532_0
+  - protobuf=3.6.0=py36he025d50_0
+  - pyparsing=3.0.4=pyhd3eb1b0_0
+  - python=3.6.13=h3758d61_0
+  - python-dateutil=2.8.2=pyhd3eb1b0_0
+  - pytz=2021.3=pyhd3eb1b0_0
+  - setuptools=58.0.4=py36haa95532_0
+  - six=1.16.0=pyhd3eb1b0_1
+  - sqlite=3.39.2=h2bbff1b_0
+  - tk=8.6.12=h2bbff1b_0
+  - tzdata=2022a=hda174b7_0
+  - vc=14.2=h21ff451_1
+  - vs2015_runtime=14.27.29016=h5e58377_2
+  - werkzeug=2.0.3=pyhd3eb1b0_0
+  - wheel=0.37.1=pyhd3eb1b0_0
+  - wincertstore=0.2=py36h7fe50ca_0
+  - xz=5.2.5=h8cc25b3_1
+  - zlib=1.2.12=h8cc25b3_2
+prefix: C:\Users\Ty Martz\Anaconda3\envs\emission_env
