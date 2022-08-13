@@ -1,12 +1,18 @@
 <!doctype html>
 <html>
   <head>
-    <title>FLASK CSV File Upload</title>
+    <title>CSV Flight Emissions Calculator</title>
   </head>
   <body>
-    <h1>Upload your CSV file</h1>
+    <h1>Download template file here to fill in and reupload</h1>
+    <form method="GET" action="/artifacts/flights_template.csv">
+      <button type="submit">Download Template</button>
+    </form>
+    <br>
+    <h1>Upload your CSV file for your flight emissions</h1>
+    <img src="./artifacts/paper_plane.png"/>
     <form method="POST" action="" enctype="multipart/form-data">
-      <p><input type="file" name="file"></p>
+      <p><input type="file" name="flights_file"></p>
       <p><input type="submit" value="Submit"></p>
     </form>
   </body>
