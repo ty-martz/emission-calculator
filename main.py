@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, Response
 import os
 from os.path import join, dirname, realpath
 import pandas as pd
@@ -42,9 +42,21 @@ def index():
 
 # Results URL
 @app.route('/results')
-def index():
+def results():
      # Set The upload HTML template '\templates\index.html'
     return render_template('results.html')
+
+# template URL
+@app.route("/getTemplate")
+def getTemplate():
+      print(os.getcwd())
+      with open("templates/artifacts/flights_template.csv") as fp:
+            csv = fp.read()
+      return Response(
+                  csv,
+                  mimetype="artifacts",
+                  headers={"Content-disposition":
+                        "attachment; filename=flight_template.csv"})
 
 
 # Get the uploaded files
