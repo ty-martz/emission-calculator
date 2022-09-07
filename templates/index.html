@@ -5,12 +5,15 @@
   </head>
   <body>
     <h1>Download template file here to fill in and reupload</h1>
-    <form method="GET" action="/artifacts/flights_template.csv">
+    <form method="GET" action="/getTemplate">
       <button type="submit">Download Template</button>
     </form>
     <br>
     <h1>Upload your CSV file for your flight emissions</h1>
-    <img src="./artifacts/paper_plane.png"/>
+    <div>
+      <img src="{{url_for('static', filename='img/paper_plane.png')}}"/>
+      <img src="{{url_for('static', filename='img/airplane.png')}}"/>
+    </div>
     <form method="POST" action="" enctype="multipart/form-data">
       <p><input type="file" name="flights_file"></p>
       <p><input type="submit" value="Submit"></p>
