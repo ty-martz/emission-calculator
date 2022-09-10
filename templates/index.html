@@ -2,21 +2,22 @@
 <html>
   <head>
     <title>CSV Flight Emissions Calculator</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}">
   </head>
   <body>
-    <h1>Download template file here to fill in and reupload</h1>
-    <form method="GET" action="/getTemplate">
-      <button type="submit">Download Template</button>
-    </form>
-    <br>
-    <h1>Upload your CSV file for your flight emissions</h1>
-    <div>
+    <div class="topnav">
       <img src="{{url_for('static', filename='img/paper_plane.png')}}"/>
-      <img src="{{url_for('static', filename='img/airplane.png')}}"/>
+      <a class="active" href="/">Home</a>
+      <a href="/single">Calculator</a>
+      <a href="/bulk">Bulk Upload</a>
     </div>
-    <form method="POST" action="" enctype="multipart/form-data">
-      <p><input type="file" name="flights_file"></p>
-      <p><input type="submit" value="Submit"></p>
-    </form>
+    <h1>Emission Calculator</h1>
+    <p>
+      Choose single or bulk entry at the top to calculate emissions from your flights.
+      So Far this app has calculated emissions for {{ n_flights }} flights!
+      This totals to {{ total_em }} tonnes of CO2.
+    </p>
+    <br>
+    
   </body>
 </html>

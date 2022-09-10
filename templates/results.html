@@ -2,12 +2,20 @@
 <html>
 	<head>
 		<title>Calculator Results</title>
-    	<!--<link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
-    	<script defer src="https://pyscript.net/alpha/pyscript.js"></script>-->
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}">
   	</head>
 	<body>
-    	<h1>RESULTS TO BE ENTERED HERE...</h1>
-		<!--add python results information-->
-		<h1>RESULTS END</h1>
+		<div class="topnav">
+			<img src="{{url_for('static', filename='img/paper_plane.png')}}"/>
+			<a href="/">Home</a>
+			<a href="/single">Calculator</a>
+			<a href="/bulk">Bulk Upload</a>
+		  </div>
+    	<h1>Total Calculated Distance and Emissions from your flights</h1><br>
+		<p> <strong>{{ total_d }}</strong> Miles travelled </p>
+		<p> <strong>{{ total_e }}</strong> Tonnes of Carbon Emitted </p><br>
+		<a href="https://www.cooleffect.org/" target="_blank">
+			<strong>See here and similar websites for offsetting options </strong>
+		</a>
   	</body>
 </html>

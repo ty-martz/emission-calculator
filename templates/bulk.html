@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Bulk Emissions Calculator</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}">
+    <script>
+      const theButton = document.querySelector(".button");
+      theButton.addEventListener("click", () => {
+          theButton.classList.add("button--loading");
+      });
+    </script>
+  </head>
+  <body>
+    <div class="topnav">
+      <img src="{{url_for('static', filename='img/paper_plane.png')}}"/>
+      <a href="/">Home</a>
+      <a href="/single">Calculator</a>
+      <a class="active" href="/bulk">Bulk Upload</a>
+    </div>
+    <h1>Download template file here to fill in and reupload</h1>
+    <form method="GET" action="/getTemplate">
+      <button class="button-56" type="submit">Download Template</button>
+    </form>
+    <br>
+    <h1>Upload your CSV file for your flight emissions</h1>
+    <!--<div>
+      <img src="{{url_for('static', filename='img/paper_plane.png')}}"/>
+      <img src="{{url_for('static', filename='img/airplane.png')}}"/>
+    </div>-->
+    <form method="POST" action="" enctype="multipart/form-data">
+      <p><input type="file" name="flights_file"></p>
+      <p><input class="button-56 button" type="submit" value="Submit"></p>
+    </form>
+  </body>
+</html>
