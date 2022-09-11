@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Calculator</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}">
+    <!--<script src="static/js/form_control.js" defer></script>-->
+  </head>
+  <body>
+    <div class="topnav">
+      <img src="{{url_for('static', filename='img/paper_plane.png')}}"/>
+      <a href="/">Home</a>
+      <a class="active" href="/calculator">Calculator</a>
+    </div>
+    <h1>Fill out the form for your flight</h1>
+    <form method="POST" action="" enctype="multipart/form-data">
+      <label for="Origin">Origin Airport:</label><br>
+      <select name="origin-select" class="form-control" id="origin-iata">  
+        <option value="" selected>Select Airport</option>
+        {% for o in air_codes %}
+                <option value="{{ o }}" SELECTED>{{ o }}</option>
+        {% endfor %}
+      </select><br><br>
+      <label for="Origin">Destination Airport:</label><br>
+      <select name="destination-select" class="form-control" id="destination-iata">  
+        <option value="" selected>Select Airport</option>
+        {% for o in air_codes %}
+                <option value="{{ o }}" SELECTED>{{ o }}</option>
+        {% endfor %}
+      </select><br><br>
+      <label for="num-passengers"># Passengers:</label><br>
+      <input name="num-pax" type="number" value=1><br><br>
+      <label for="round-trip">Round Trip</label><br>
+        <label for="round-trip">&emsp;Yes</label><input type="radio" id="round-trip-radio-yes" name="round-trip" value="True"><br>
+        <label for="round-trip">&emsp;No</label><input type="radio" id="round-trip-radio-no" name="round-trip" value="False"><br>
+      <label for="rad-force">Include Radiative Forcing?</label><i class="rf-note"> *recommended</i><br>
+        <label for="rad-force">&emsp;Yes</label><input type="radio" id="rad-force-radio-yes" name="rad-force" value="False"><br>
+        <label for="rad-force">&emsp;No</label><input type="radio" id="rad-force-radio-no" name="rad-force" value="True"><br>
+      <p class="rf-note"><i>* Radiative Forcing is a factor of emissions being greater when emitted at higher altitudes</i></p>
+      <p><input class="button-56 button" type="submit" value="Submit"></p>
+    </form>
+    <br>
+    <div>{{ emiss_out }}</div>
+    
+  </body>
+</html>
